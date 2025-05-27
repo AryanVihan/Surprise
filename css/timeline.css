@@ -1,0 +1,206 @@
+/* Timeline Carousel Styles */
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 50px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Timeline Intro */
+.timeline-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Timeline Track */
+.timeline-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    padding: 20px 0;
+    gap: 25px;
+    will-change: transform;
+    transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Timeline Item */
+.timeline-item {
+    flex: 0 0 auto;
+    max-width: 80%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+    will-change: transform; /* Optimize for hardware acceleration */
+    contain: layout; /* Improve rendering performance */
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Timeline Image Container */
+.timeline-image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Timeline Image */
+.timeline-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+}
+
+/* Timeline item styling without hover effects */
+.timeline-image-container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.timeline-image {
+    transform: scale(1);
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* Remove glow effect completely */
+.timeline-glow {
+    display: none;
+}
+
+/* Timeline Content */
+.timeline-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Date */
+.timeline-date {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff3366;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Description */
+.timeline-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Timeline Controls */
+.timeline-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.timeline-button {
+    background: linear-gradient(45deg, #ff3366, #9933ff);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Auto-play animation */
+@keyframes carousel-autoplay {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-800%); } /* 8 images */
+}
+
+.timeline-track.autoplay {
+    animation: carousel-autoplay 40s linear infinite;
+}
+
+.timeline-track.autoplay:hover {
+    animation-play-state: paused;
+}
+
+/* Year Markers */
+.timeline-year-marker {
+    position: absolute;
+    top: -30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff3366;
+    padding: 5px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline-image {
+        height: 200px;
+    }
+    
+    .timeline-date {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-description {
+        font-size: 0.9rem;
+    }
+}

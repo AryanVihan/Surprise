@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open When Letters - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/letters.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link active"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link"><i class="fas fa-birthday-cake"></i> Wishes</a></li>
+                <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+                <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="letters" class="section letters-section">
+            <div class="section-container">
+                <h2 class="section-title">Open When Letters</h2>
+                <div class="section-content">
+                    <p class="letters-intro">For the moments when we're apart, but you need me most. Click on an envelope to open it...</p>
+                    
+                    <div class="letters-container">
+                        <div class="letter-wrapper" data-letter="sad">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You're Sad</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Dearest Vazeeda,</h3>
+                                        <p>If you're reading this, it means you're feeling down. Remember that even the darkest clouds eventually part to reveal the sun.</p>
+                                        <p>When sadness finds you, close your eyes and remember our laughter, our adventures, and the way we look at each other when the world fades away.</p>
+                                        <p>Your smile is my favorite sight in the world, and I promise whatever is making you sad right now is temporary. Your strength amazes me every day.</p>
+                                        <p>Take a deep breath. Put on our song. Remember that I love you more than words can express, and that will never change.</p>
+                                        <p class="letter-signature">Forever yours,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="letter-wrapper" data-letter="miss">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You Miss Me</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Beautiful Vazeeda,</h3>
+                                        <p>Distance may separate us physically, but nothing can separate our hearts. When you miss me, know that I'm missing you just as much, if not more.</p>
+                                        <p>Look up at the stars tonight. I'll be looking at the same ones, and somehow that makes the distance between us feel smaller.</p>
+                                        <p>Remember our promise: no matter how far apart we are, we're always connected by the invisible thread that ties our souls together.</p>
+                                        <p>Close your eyes and feel my arms around you. I'm sending all my love across the miles.</p>
+                                        <p class="letter-signature">Counting the moments until I see you again,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="letter-wrapper" data-letter="laugh">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You Need to Laugh</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Silly Vazeeda,</h3>
+                                        <p>Remember that time we tried to cook together and nearly burned down the kitchen? Or when we got lost on our road trip and ended up at that strange little museum of oddities?</p>
+                                        <p>How about when we attempted to dance in the rain and you slipped, pulling me down with you, and we just laid there laughing until our sides hurt?</p>
+                                        <p>Life with you is filled with these perfect, ridiculous moments that I wouldn't trade for anything in the world.</p>
+                                        <p>I hope thinking of these memories brings a smile to your face, because your laughter is my favorite sound in the world.</p>
+                                        <p class="letter-signature">Your partner in silliness,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="letter-wrapper" data-letter="proud">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You Need Encouragement</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Incredible Vazeeda,</h3>
+                                        <p>I want you to know how immensely proud I am of you. Your determination, your kindness, your brilliance - they inspire me every single day.</p>
+                                        <p>Whatever challenge you're facing right now, I know you have the strength to overcome it. You've conquered so much already, and this is just another mountain that will soon be beneath your feet.</p>
+                                        <p>Remember that it's okay to take things one step at a time. Progress isn't always a straight line, but every step forward counts, no matter how small.</p>
+                                        <p>I believe in you completely and without reservation. You are capable of amazing things.</p>
+                                        <p class="letter-signature">Your biggest fan,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="letter-wrapper" data-letter="love">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You Need to Feel Loved</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Heart, My Vazeeda,</h3>
+                                        <p>From the moment you entered my life, everything changed. Colors became brighter, music sounded sweeter, and the world felt more alive.</p>
+                                        <p>I love the way your eyes crinkle when you laugh. I love how passionate you get when talking about things that matter to you. I love your kindness, your strength, your vulnerability.</p>
+                                        <p>I love the person I am when I'm with you - the best version of myself.</p>
+                                        <p>My love for you isn't just a feeling; it's a choice I make every morning when I wake up, and it's the easiest choice I've ever made.</p>
+                                        <p>You are loved. Completely. Unconditionally. Always.</p>
+                                        <p class="letter-signature">Yours for eternity,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="letter-wrapper" data-letter="future">
+                            <div class="envelope">
+                                <div class="envelope-front">
+                                    <div class="envelope-flap"></div>
+                                    <div class="envelope-text">Open When You Dream of Our Future</div>
+                                </div>
+                                <div class="envelope-back"></div>
+                                <div class="letter">
+                                    <div class="letter-content">
+                                        <h3>My Forever Vazeeda,</h3>
+                                        <p>When I close my eyes and imagine our future, I see a home filled with laughter, walls covered in photos of our adventures, and the beautiful life we'll build together.</p>
+                                        <p>I see lazy Sunday mornings and exciting travels to places we've always wanted to visit. I see us growing together, supporting each other's dreams, and creating new ones together.</p>
+                                        <p>I see us weathering life's storms hand in hand, celebrating victories big and small, and finding joy in the simple moments we share.</p>
+                                        <p>Our future holds endless possibilities, and I can't wait to discover them all with you by my side.</p>
+                                        <p class="letter-signature">Dreaming of forever with you,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/letters.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

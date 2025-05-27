@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vazeeda ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/chat-games.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/scroll-top.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/reasons.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/optimizations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Parisienne&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="fullscreen-section">
+        <div class="hearts-container"></div>
+        
+        <!-- Left Video Container -->
+        <div class="welcome-video-container left">
+            <div class="welcome-video glass-card">
+                <video autoplay muted loop playsinline preload="metadata" data-src="videos/welcome vid1.mp4">
+                    <!-- Video will be loaded via JavaScript for better performance -->
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+        </div>
+        
+        <!-- Welcome Content -->
+        <div class="welcome-content glass-card">
+            <h1 class="neon-text">To Vazeeda</h1>
+            <h2 class="gradient-text">The love of my life, on your special day...</h2>
+            <p class="welcome-message">A journey through our memories and love</p>
+            <button id="enter-button" class="heart-button pulse-element">
+                <span>Enter</span>
+                <div class="heart-animation"></div>
+            </button>
+        </div>
+        
+        <!-- Right Video Container -->
+        <div class="welcome-video-container right">
+            <div class="welcome-video glass-card">
+                <video autoplay muted loop playsinline preload="metadata" data-src="videos/welcome vid2.mp4">
+                    <!-- Video will be loaded via JavaScript for better performance -->
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+        </div>
+        <div class="audio-controls">
+            <button id="music-toggle">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Side Navigation Toggle Button -->
+    <button id="side-nav-toggle" class="nav-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Main Content (Hidden initially) -->
+    <div id="main-content" class="hidden">
+        <!-- Side Navigation -->
+        <nav id="side-nav" class="side-nav">
+            <div class="side-nav-header">
+                <h3>Menu</h3>
+                <button id="side-nav-close" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="nav-categories">
+                <div class="nav-category">
+                    <h4>Our Story</h4>
+                    <ul>
+                        <li><a href="#reasons" class="nav-link"><i class="fas fa-heart"></i> 100 Reasons</a></li>
+                        <li><a href="#timeline" class="nav-link"><i class="fas fa-clock"></i> Our Timeline</a></li>
+                        <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="nav-category">
+                    <h4>Special Moments</h4>
+                    <ul>
+                        <li><a href="#journal" class="nav-link"><i class="fas fa-book"></i> Journal</a></li>
+                        <li><a href="#starry-sky" class="nav-link"><i class="fas fa-star"></i> Starry Sky</a></li>
+                        <li><a href="#future" class="nav-link"><i class="fas fa-rocket"></i> Our Future</a></li>
+                    </ul>
+                </div>
+                <div class="nav-category">
+                    <h4>Fun & Surprises</h4>
+                    <ul>
+                        <li><a href="#open-when" class="nav-link"><i class="fas fa-envelope"></i> Open When</a></li>
+                        <li><a href="#surprise" class="nav-link"><i class="fas fa-gift"></i> Surprises</a></li>
+                        <li><a href="#quiz" class="nav-link"><i class="fas fa-question"></i> Quiz</a></li>
+                        <li><a href="#love-letter" class="nav-link"><i class="fas fa-pen-fancy"></i> Love Letters</a></li>
+                        <li><a href="#games" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Top Navigation (Simplified) -->
+        <nav id="main-nav" class="top-nav">
+            <ul>
+                <li><a href="#reasons">100 Reasons</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#surprise">Surprises</a></li>
+                <li><a href="#games">Games</a></li>
+            </ul>
+        </nav>
+
+        <!-- 100 Reasons Section -->
+        <section id="reasons" class="section">
+            <h2 class="section-title">100 Reasons Why I Love You</h2>
+            <div class="reasons-list-container">
+                <ol class="reasons-list">
+                    <li>Your beautiful smile lights up my world every day.</li>
+                    <li>The way your eyes sparkle when you're excited about something.</li>
+                    <li>Your kindness and compassion towards everyone you meet.</li>
+                    <li>How you always know exactly what to say to make me feel better.</li>
+                    <li>The sound of your laughter is my favorite melody.</li>
+                    <li>Your determination and perseverance in everything you do.</li>
+                    <li>The way you care for others without expecting anything in return.</li>
+                    <li>Your intelligence and thoughtfulness in every conversation.</li>
+                    <li>How you challenge me to be a better person every day.</li>
+                    <li>The comfort I feel just being in your presence.</li>
+                    <li>Your creativity and unique perspective on life.</li>
+                    <li>The way you listen attentively when I need to talk.</li>
+                    <li>Your passion for the things you believe in.</li>
+                    <li>How you're not afraid to be yourself, quirks and all.</li>
+                    <li>The way you make even ordinary moments feel special.</li>
+                    <li>Your resilience in the face of challenges.</li>
+                    <li>How you always see the best in people, including me.</li>
+                    <li>Your ability to find joy in the simplest things.</li>
+                    <li>The way you support my dreams and ambitions.</li>
+                    <li>Your honesty, even when the truth is difficult.</li>
+                    <li>How you remember the little details about things I like.</li>
+                    <li>Your patience when I'm being difficult.</li>
+                    <li>The way you make me feel safe and loved.</li>
+                    <li>Your infectious enthusiasm for new experiences.</li>
+                    <li>How you're always willing to try new things.</li>
+                    <li>The way you dance like nobody's watching.</li>
+                    <li>Your thoughtful gestures that show how much you care.</li>
+                    <li>How you stand up for what you believe is right.</li>
+                    <li>The way you inspire me to pursue my passions.</li>
+                    <li>Your ability to find solutions when I only see problems.</li>
+                    <li>How you embrace life with open arms.</li>
+                    <li>The way you make me laugh even on my worst days.</li>
+                    <li>Your dedication to personal growth and learning.</li>
+                    <li>How you're not afraid to show vulnerability.</li>
+                    <li>The way you appreciate the beauty in everyday life.</li>
+                    <li>Your generosity with your time and attention.</li>
+                    <li>How you make everyone around you feel important.</li>
+                    <li>The way you forgive without holding grudges.</li>
+                    <li>Your ability to stay calm in stressful situations.</li>
+                    <li>How you always find the silver lining in difficult circumstances.</li>
+                    <li>The way you express your love in countless small ways.</li>
+                    <li>Your willingness to compromise and find middle ground.</li>
+                    <li>How you celebrate my successes as if they were your own.</li>
+                    <li>The way you comfort me when I'm feeling down.</li>
+                    <li>Your optimism that inspires me to stay positive.</li>
+                    <li>How you're always there for me when I need you.</li>
+                    <li>The way you respect my opinions, even when we disagree.</li>
+                    <li>Your ability to make me feel like the luckiest person alive.</li>
+                    <li>How you bring out the best version of me.</li>
+                    <li>The way you handle challenges with grace and dignity.</li>
+                </ol>
+                <ol class="reasons-list" start="51">
+                    <li>Your incredible strength, both inside and out.</li>
+                    <li>How you're not afraid to dream big.</li>
+                    <li>The way you make our house feel like a home.</li>
+                    <li>Your sense of adventure and spontaneity.</li>
+                    <li>How you've taught me the true meaning of love.</li>
+                    <li>The way you prioritize our relationship.</li>
+                    <li>Your ability to make me feel understood.</li>
+                    <li>How you accept me completely, flaws and all.</li>
+                    <li>The way you encourage me to step outside my comfort zone.</li>
+                    <li>Your unwavering belief in me, even when I doubt myself.</li>
+                    <li>How you make every day an opportunity for joy.</li>
+                    <li>The way you've helped me grow as a person.</li>
+                    <li>Your ability to find humor in difficult situations.</li>
+                    <li>How you've shown me what unconditional love truly means.</li>
+                    <li>The way you make me feel valued and appreciated.</li>
+                    <li>Your thoughtfulness in everything you do.</li>
+                    <li>How you always know when I need space or closeness.</li>
+                    <li>The way you've become not just my partner, but my best friend.</li>
+                    <li>Your ability to see beauty where others might not.</li>
+                    <li>How you've taught me to be more compassionate.</li>
+                    <li>The way you make me want to be a better person.</li>
+                    <li>Your willingness to grow and evolve together.</li>
+                    <li>How you've shown me the importance of self-care.</li>
+                    <li>The way you make even the mundane tasks enjoyable.</li>
+                    <li>Your ability to make me feel completely at ease.</li>
+                    <li>How you've helped me discover new parts of myself.</li>
+                    <li>The way you always know how to make me smile.</li>
+                    <li>Your commitment to our shared values and goals.</li>
+                    <li>How you've taught me patience and understanding.</li>
+                    <li>The way you make every celebration special.</li>
+                    <li>Your ability to see the potential in every situation.</li>
+                    <li>How you've shown me what true partnership means.</li>
+                    <li>The way you inspire me with your resilience.</li>
+                    <li>Your ability to make me feel like I can achieve anything.</li>
+                    <li>How you've become the center of my world.</li>
+                    <li>The way you make me feel completely loved.</li>
+                    <li>Your ability to turn ordinary moments into memories.</li>
+                    <li>How you've become my favorite person to share life with.</li>
+                    <li>The way you make every day better just by being in it.</li>
+                    <li>Your ability to make me feel like I'm exactly where I'm supposed to be.</li>
+                    <li>How you've become my home, no matter where we are.</li>
+                    <li>The way you love me exactly as I am.</li>
+                    <li>Your ability to make me feel like the most special person in the world.</li>
+                    <li>How you've shown me that love only grows stronger with time.</li>
+                    <li>The way you make me excited about our future together.</li>
+                    <li>Your ability to make me feel complete.</li>
+                    <li>How you've become my favorite part of every day.</li>
+                    <li>The way you make me believe in forever.</li>
+                    <li>Your ability to make me feel like I've found my soulmate.</li>
+                    <li>How you've made my life infinitely better just by being in it.</li>
+                    <li>The way you make me feel like the luckiest person in the world to have your love.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section">
+            <h2 class="section-title">Our Journey Together</h2>
+            <div class="timeline-container">
+                <!-- Timeline items will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Open When Section -->
+        <section id="open-when" class="section">
+            <h2 class="section-title">Open When...</h2>
+            <div class="envelopes-container">
+                <!-- Envelopes will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <h2 class="section-title">Our Journey Together</h2>
+            
+            <!-- Carousel for Journey Together Images -->
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="images/journey together1.png" alt="Journey Together 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together2.png" alt="Journey Together 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together3.png" alt="Journey Together 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together4.png" alt="Journey Together 4" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together5.png" alt="Journey Together 5" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together6.jpg" alt="Journey Together 6" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together7.jpg" alt="Journey Together 7" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/journey together8.jpg" alt="Journey Together 8" class="carousel-image">
+                    </div>
+                </div>
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="video-message rainbow-border">
+                <h3 class="gradient-text">A Special Message For You</h3>
+                <div class="video-container glass-card">
+                    <!-- Video placeholder - to be replaced with actual video -->
+                    <div class="video-placeholder float-element">
+                        <i class="fas fa-play-circle neon-text"></i>
+                        <p>Click to play</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Button Section -->
+        <section id="surprise" class="section">
+            <h2 class="section-title">Click for a Surprise</h2>
+            <button id="surprise-button" class="gradient-button pulse-element">
+                <span>Surprise Me!</span>
+            </button>
+            <div id="surprise-content" class="hidden glass-card">
+                <!-- Surprise content will be shown here -->
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section">
+            <h2 class="section-title">How Well Do You Know Us?</h2>
+            <div class="quiz-container">
+                <!-- Quiz questions will be populated by JavaScript -->
+            </div>
+            <div id="quiz-result" class="hidden">
+                <!-- Quiz results will be shown here -->
+            </div>
+        </section>
+
+
+
+        <!-- Love Letter Generator -->
+        <section id="love-letter" class="section">
+            <h2 class="section-title">Love Letters</h2>
+            <div class="love-letter-container">
+                <div class="love-letter">
+                    <div id="typed-letter-container"></div>
+                </div>
+                <button id="generate-letter" class="fancy-button">Generate New Letter</button>
+            </div>
+        </section>
+
+        <!-- Love Journal -->
+        <section id="journal" class="section">
+            <h2 class="section-title">Our Love Journal</h2>
+            <div class="journal-container">
+                <div class="journal-pages">
+                    <!-- Journal pages will be populated by JavaScript -->
+                </div>
+                <div class="journal-controls">
+                    <button id="prev-page" class="journal-button"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-page" class="journal-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message in a Bottle -->
+        <section id="message-bottle" class="section">
+            <h2 class="section-title">Message in a Bottle</h2>
+            <div class="ocean-container">
+                <div class="ocean-waves"></div>
+                <div class="bottle-container">
+                    <div class="bottle">
+                        <div class="bottle-message">Click to open</div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottle-message-content" class="hidden">
+                <!-- Bottle message content will be shown here -->
+            </div>
+        </section>
+
+        <!-- Starry Sky Section -->
+        <section id="starry-sky" class="section">
+            <h2 class="section-title">Written in the Stars</h2>
+            <div class="sky-container">
+                <div class="stars-container">
+                    <!-- Stars will be populated by JavaScript -->
+                </div>
+                <div class="constellation-name">Vazeeda</div>
+            </div>
+        </section>
+
+        <!-- Future Vision Wall -->
+        <section id="future" class="section">
+            <h2 class="section-title">Our Future Together</h2>
+            <div class="vision-wall">
+                <!-- Vision items will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Chat Simulation -->
+        <section id="chat-sim" class="section">
+            <h2 class="section-title">Remember This Conversation?</h2>
+            <div class="chat-container">
+                <div class="chat-messages">
+                    <!-- Chat messages will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section">
+            <h2 class="section-title">Fun & Games</h2>
+            
+            <!-- Jigsaw Puzzle -->
+            <div class="game-container">
+                <h3>Complete Our Puzzle</h3>
+                <div id="puzzle-container">
+                    <!-- Puzzle pieces will be populated by JavaScript -->
+                </div>
+                <div id="puzzle-complete" class="hidden">
+                    <!-- Puzzle completion message will be shown here -->
+                </div>
+            </div>
+            
+            <!-- Star Catching Game -->
+            <div class="game-container">
+                <h3>Catch Falling Hearts</h3>
+                <div id="heart-game-container">
+                    <div id="heart-catcher"></div>
+                    <div id="falling-hearts-container"></div>
+                </div>
+                <button id="start-heart-game" class="fancy-button">Start Game</button>
+                <div id="heart-game-score">Score: 0</div>
+                <div id="heart-game-message" class="hidden">
+                    <!-- Heart game messages will be shown here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ for Vazeeda</p>
+            <p class="copyright">2025</p>
+        </footer>
+    </div>
+
+    <!-- Error Handler - Load First -->
+    <script src="js/error-handler.js"></script>
+    
+    <!-- Performance Optimizer -->
+    <script src="js/performance-optimizer.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/sparkle.js"></script>
+    <script src="js/scroll-top.js"></script>
+    <script src="js/welcome.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/floating-hearts.js"></script>
+    <script src="js/journal.js"></script>
+    <script src="js/message-bottle.js"></script>
+    <script src="js/starry-sky.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/bubbles.js"></script>
+    <script src="js/section-titles.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/surprise.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/bouquet.js"></script>
+    <script src="js/loveLetter.js"></script>
+    <script src="js/starry.js"></script>
+    <script src="js/future-placeholder.js"></script> <!-- Placeholder for future section -->
+    <script src="js/chat.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/puzzle-placeholder.js"></script> <!-- Placeholder for puzzle section -->
+</body>
+</html>

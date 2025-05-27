@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/wishes.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link active"><i class="fas fa-birthday-cake"></i> Wishes</a></li>
+                <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+                <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="wishes" class="section wishes-section">
+            <div class="section-container">
+                <h2 class="section-title">Birthday Wishes</h2>
+                <div class="section-content">
+                    <div class="wishes-intro">
+                        <p>My heartfelt wishes for your special day and for every day after.</p>
+                    </div>
+                    
+                    <div class="wishes-card">
+                        <div class="wishes-card-inner">
+                            <div class="wishes-header">
+                                <i class="fas fa-star wishes-icon"></i>
+                                <h3>To My Beloved Vazeeda</h3>
+                            </div>
+                            
+                            <div class="wishes-body">
+                                <p>On your birthday, I want you to know that you are the most precious gift in my life. Your smile brightens my darkest days, your laughter is my favorite melody, and your love is the greatest blessing I could ever ask for.</p>
+                                
+                                <p>As you begin another beautiful year of your life, I wish for you:</p>
+                                
+                                <ul class="wishes-list">
+                                    <li><i class="fas fa-heart"></i> Days filled with laughter and joy</li>
+                                    <li><i class="fas fa-heart"></i> Moments of peace and contentment</li>
+                                    <li><i class="fas fa-heart"></i> Adventures that excite your spirit</li>
+                                    <li><i class="fas fa-heart"></i> Dreams that come true one by one</li>
+                                    <li><i class="fas fa-heart"></i> Love that grows deeper with each passing day</li>
+                                </ul>
+                                
+                                <p>You deserve all the happiness this world has to offer, and I promise to do everything in my power to make each day special for you, not just your birthday.</p>
+                                
+                                <p>Thank you for being the amazing person you are - for your kindness, your strength, your passion, and your love. You inspire me every day to be a better person.</p>
+                                
+                                <p>May this year bring you closer to all your dreams and aspirations. I'm so grateful to be on this journey with you, and I can't wait to see what the future holds for us.</p>
+                                
+                                <p class="wishes-signature">With all my love,<br>Aryan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="birthday-cake">
+                        <div class="cake-base"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cake-top"></div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-gallery">
+                        <h3 class="gallery-title">Our Special Moments</h3>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="images/img1.jpg" alt="Special Moment 1" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+1'">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/img2.jpg" alt="Special Moment 2" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+2'">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/img3.jpg" alt="Special Moment 3" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+3'">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/img4.jpg" alt="Special Moment 4" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+4'">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/img5.jpg" alt="Special Moment 5" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+5'">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/img6.jpg" alt="Special Moment 6" onerror="this.src='https://via.placeholder.com/400x300?text=Special+Moment+6'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

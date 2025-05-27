@@ -1,0 +1,143 @@
+/* 100 Reasons Why I Love You Section Styles */
+
+/* Reasons Container */
+.reasons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Reasons Intro */
+.reasons-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: rgba(255, 51, 102, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 51, 102, 0.2);
+}
+
+/* Reasons List Wrapper */
+.reasons-list-wrapper {
+    flex: 1 1 45%;
+    min-width: 300px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+/* Reasons List */
+.reasons-list {
+    list-style-position: outside;
+    padding-left: 30px;
+    counter-reset: reasons-counter;
+}
+
+/* Reason Item */
+.reasons-list li {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border-left: 3px solid #ff3366;
+    transition: all 0.3s ease;
+    counter-increment: reasons-counter;
+}
+
+/* Remove the custom counter */
+.reasons-list {
+    list-style-type: decimal;
+}
+
+.reasons-list li::before {
+    display: none;
+}
+
+/* Hover Effect */
+.reasons-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 3px solid #9933ff;
+}
+
+/* Consistent Colors */
+.reasons-list li {
+    border-left-color: #ff3366;
+}
+
+/* Hover Effect - Keep the same color on hover */
+.reasons-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 3px solid #ff3366;
+}
+
+/* Reason Number Consistent Color */
+.reasons-list li::before {
+    background: linear-gradient(45deg, #ff3366, #ff6699);
+}
+
+/* All reason numbers have the same color */
+
+/* Special Reasons (Milestone Numbers) */
+.reasons-list li.milestone {
+    background: rgba(255, 51, 102, 0.2);
+    border-left: 5px solid #ff3366;
+    font-weight: 500;
+}
+
+.reasons-list li.milestone::before {
+    background: linear-gradient(45deg, #ff3366, #ff0066);
+    width: 35px;
+    height: 35px;
+    left: -30px;
+    font-size: 1rem;
+}
+
+/* Animation for Reasons */
+.reasons-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reasons-list li.reason-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .reasons-container {
+        flex-direction: column;
+    }
+    
+    .reasons-list-wrapper {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .reasons-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .reasons-list li::before {
+        width: 25px;
+        height: 25px;
+        left: -22px;
+        font-size: 0.8rem;
+    }
+}

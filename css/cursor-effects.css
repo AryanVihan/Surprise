@@ -1,0 +1,124 @@
+/* Cursor Effects Styles */
+
+/* Container for cursor effects */
+.cursor-effects-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Base cursor effect */
+.cursor-effect {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    animation: cursor-float 1.5s forwards;
+}
+
+/* Heart effect */
+.cursor-effect.heart {
+    font-size: 20px;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
+
+/* Sparkle effect */
+.cursor-effect.sparkle {
+    font-size: 18px;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
+    animation: sparkle-float 1.5s forwards;
+}
+
+@keyframes sparkle-float {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(0, -80px) scale(0.8) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Text effect */
+.cursor-effect.text {
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Animation for cursor effects */
+@keyframes cursor-float {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(0, -80px) scale(1.2) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+/* Firework particle styles */
+.firework-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Confetti styles */
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 0.9;
+}
+
+.confetti-piece.square {
+    border-radius: 0;
+}
+
+.confetti-piece.rectangle {
+    border-radius: 0;
+}
+
+.confetti-piece.circle {
+    border-radius: 50%;
+}
+
+/* Reduce effects for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .cursor-effect, .firework-particle, .confetti-piece {
+        animation-duration: 0.5s;
+    }
+    
+    @keyframes cursor-float {
+        0% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translate(-50%, -50%) translate(0, -20px);
+            opacity: 0;
+        }
+    }
+}

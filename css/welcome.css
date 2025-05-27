@@ -1,0 +1,189 @@
+/* Welcome Page Styles */
+
+/* Welcome Message */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: rgba(255, 51, 102, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 51, 102, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Cards */
+.section-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    animation: fadeIn 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.section-card {
+    flex: 0 0 calc(33.33% - 30px);
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.section-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 51, 102, 0.3), rgba(153, 51, 255, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.section-card:hover::before {
+    opacity: 1;
+}
+
+.section-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.section-card:hover i {
+    transform: scale(1.2);
+}
+
+.section-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    z-index: 2;
+}
+
+.section-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Color Variations */
+.section-card:nth-child(1)::before {
+    background: linear-gradient(45deg, rgba(255, 51, 102, 0.3), rgba(255, 102, 102, 0.3));
+}
+
+.section-card:nth-child(2)::before {
+    background: linear-gradient(45deg, rgba(153, 51, 255, 0.3), rgba(102, 204, 255, 0.3));
+}
+
+.section-card:nth-child(3)::before {
+    background: linear-gradient(45deg, rgba(255, 204, 51, 0.3), rgba(255, 153, 102, 0.3));
+}
+
+.section-card:nth-child(4)::before {
+    background: linear-gradient(45deg, rgba(102, 204, 153, 0.3), rgba(51, 204, 255, 0.3));
+}
+
+.section-card:nth-child(5)::before {
+    background: linear-gradient(45deg, rgba(255, 102, 153, 0.3), rgba(255, 51, 153, 0.3));
+}
+
+/* Future Section Styles */
+.future-section {
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.future-message {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: rgba(153, 51, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(153, 51, 255, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+.future-message p {
+    margin-bottom: 15px;
+}
+
+.future-video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.future-video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease 0.5s forwards;
+    opacity: 0;
+}
+
+.future-video video {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section-card {
+        flex: 0 0 100%;
+    }
+    
+    .future-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .polaroid {
+        margin-bottom: 20px;
+    }
+}

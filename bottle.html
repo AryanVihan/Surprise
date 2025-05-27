@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message in a Bottle - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/bottle.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link"><i class="fas fa-birthday-cake"></i> Wishes</a></li>
+                <li><a href="bottle.html" class="nav-link active"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+                <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="bottle" class="section bottle-section">
+            <div class="section-container">
+                <h2 class="section-title">Message in a Bottle</h2>
+                <div class="section-content">
+                    <div class="bottle-intro">
+                        <p>I've sent a special message adrift in the ocean, just for you. Click on the bottle to reveal what's inside.</p>
+                    </div>
+                    
+                    <div class="ocean-container">
+                        <div class="ocean">
+                            <div class="wave wave1"></div>
+                            <div class="wave wave2"></div>
+                            <div class="wave wave3"></div>
+                            <div class="wave wave4"></div>
+                        </div>
+                        
+                        <div id="bottle-container" class="bottle-container">
+                            <div class="bottle">
+                                <div class="bottle-top"></div>
+                                <div class="bottle-body"></div>
+                                <div class="message-scroll"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="message-modal" class="message-modal">
+                        <div class="message-content">
+                            <div class="close-btn"><i class="fas fa-times"></i></div>
+                            <div class="scroll-container">
+                                <div class="scroll-paper">
+                                    <h3>My Dearest Vazeeda,</h3>
+                                    <p>If you're reading this message, then the ocean of love has carried my words to you, just as destiny carried you to me.</p>
+                                    <p>Some feelings are too deep to express in ordinary ways. That's why I've sent this message in a bottle, floating across the waves of my heart to reach yours.</p>
+                                    <p>You are my lighthouse in stormy seas, my calm harbor in rough waters. With you, I've discovered treasures I never knew existed - the treasure of true companionship, of understanding without words, of love without conditions.</p>
+                                    <p>Like the ocean, my love for you is vast and endless. It reaches depths unexplored and stretches to horizons unseen. It ebbs and flows with the rhythm of life, but it never diminishes.</p>
+                                    <p>On your birthday, I want you to know that you've made my life an incredible voyage of discovery and joy. Every day with you is an adventure I cherish.</p>
+                                    <p>May this message remind you, whenever you need it, that you are loved beyond measure - across oceans, through time, always and forever.</p>
+                                    <p class="message-signature">With all my love,<br>Aryan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    <script src="js/bottle.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

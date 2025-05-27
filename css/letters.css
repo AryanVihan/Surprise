@@ -1,0 +1,265 @@
+/* Open When Letters Styles */
+
+/* Letters Container */
+.letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+/* Letters Intro */
+.letters-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Letter Wrapper */
+.letter-wrapper {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin-bottom: 100px;
+}
+
+/* Envelope */
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Envelope Front */
+.envelope-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    transform-origin: center center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Envelope Flap */
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.5s ease;
+    z-index: 3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Envelope Text */
+.envelope-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Envelope Back - No longer needed with new approach */
+.envelope-back {
+    display: none;
+}
+
+/* Letter */
+.letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: visible;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Letter Content */
+.letter-content {
+    padding: 20px;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 1s, transform 0.5s ease 1s;
+    max-height: 400px; /* Set a fixed height */
+    overflow-y: auto; /* Add scrollbar */
+    transform: rotate(0deg); /* Fix inverted text */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ff3366 rgba(255, 255, 255, 0.1); /* Firefox */
+}
+
+/* Scrollbar styling for WebKit browsers */
+.letter-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.letter-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.letter-content::-webkit-scrollbar-thumb {
+    background-color: #ff3366;
+    border-radius: 10px;
+}
+
+.letter-content h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #ff3366;
+    margin-bottom: 15px;
+}
+
+.letter-content p {
+    margin-bottom: 15px;
+}
+
+.letter-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #ff3366;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Hover & Open Effects */
+.letter-wrapper:hover .envelope-front {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.letter-wrapper:hover .envelope-text {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.letter-wrapper:hover .envelope-flap {
+    transform: rotateX(20deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Open Letter State */
+.letter-wrapper.open .envelope-front {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.letter-wrapper.open .letter {
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.letter-wrapper.open .letter-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different Envelope Colors */
+.letter-wrapper[data-letter="sad"] .envelope-front,
+.letter-wrapper[data-letter="sad"] .envelope-flap {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.letter-wrapper[data-letter="miss"] .envelope-front,
+.letter-wrapper[data-letter="miss"] .envelope-flap {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.letter-wrapper[data-letter="laugh"] .envelope-front,
+.letter-wrapper[data-letter="laugh"] .envelope-flap {
+    background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+}
+
+.letter-wrapper[data-letter="proud"] .envelope-front,
+.letter-wrapper[data-letter="proud"] .envelope-flap {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.letter-wrapper[data-letter="love"] .envelope-front,
+.letter-wrapper[data-letter="love"] .envelope-flap {
+    background: linear-gradient(135deg, #ff9a9e 0%, #ff6a88 100%);
+}
+
+.letter-wrapper[data-letter="future"] .envelope-front,
+.letter-wrapper[data-letter="future"] .envelope-flap {
+    background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%);
+}
+
+/* Typewriter Effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.letter-wrapper.open .letter-content p {
+    overflow: hidden;
+    border-right: .15em solid #ff3366;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end) forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .letter-wrapper {
+        width: 250px;
+        height: 170px;
+    }
+    
+    .envelope-text {
+        font-size: 1.2rem;
+    }
+    
+    .letter-content {
+        font-size: 0.8rem;
+    }
+    
+    .letter-wrapper.open .letter {
+        height: 250px;
+    }
+}

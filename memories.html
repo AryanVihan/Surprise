@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey Together - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="navigation.html" class="nav-link"><i class="fas fa-th-large"></i> Menu</a></li>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="memories.html" class="nav-link active"><i class="fas fa-camera"></i> Memories</a></li>
+                <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="journal.html" class="nav-link"><i class="fas fa-book"></i> Journal</a></li>
+                <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="memories" class="section memories-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Journey Together</h2>
+                <div class="section-content">
+                    <p class="timeline-intro">Every moment with you has been a beautiful part of our story. Here's a glimpse of our journey together...</p>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-track" id="timeline-track">
+                            <!-- Timeline items -->
+                            <div class="timeline-item" data-year="2020" data-month="January">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together1.png" alt="Our journey - First meeting" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2020" data-month="May">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together2.png" alt="Our journey - First date" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2020" data-month="September">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together3.png" alt="Our journey - Beach trip" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2021" data-month="February">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together4.png" alt="Our journey - Valentine's Day" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2021" data-month="July">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together5.png" alt="Our journey - Moving in" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2022" data-month="April">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together6.jpg" alt="Our journey - Anniversary trip" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2023" data-month="October">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together7.jpg" alt="Our journey - Family gathering" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2024" data-month="March">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together8.jpg" alt="Our journey - Special moment" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-controls">
+                            <button class="timeline-button prev-button"><i class="fas fa-chevron-left"></i></button>
+                            <button class="timeline-button next-button"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/memories.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

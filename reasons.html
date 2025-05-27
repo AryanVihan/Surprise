@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Reasons Why I Love You - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/reasons.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="reasons.html" class="nav-link active"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link"><i class="fas fa-birthday-cake"></i> Wishes</a></li>
+                <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+                <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="reasons" class="section reasons-section">
+            <div class="section-container">
+                <h2 class="section-title">100 Reasons Why I Love You</h2>
+                <div class="section-content">
+                    <div class="reasons-intro">
+                        <p>There are countless reasons why you're the one for me, but here are 100 that make my heart skip a beat every time I think of you...</p>
+                    </div>
+                    
+                    <div class="reasons-container">
+                        <div class="reasons-list-wrapper">
+                            <ol class="reasons-list" id="reasons-list-1" start="1">
+                                <!-- First 25 reasons will be populated by JavaScript -->
+                            </ol>
+                        </div>
+                        
+                        <div class="reasons-list-wrapper">
+                            <ol class="reasons-list" id="reasons-list-2" start="26">
+                                <!-- Next 25 reasons will be populated by JavaScript -->
+                            </ol>
+                        </div>
+                        
+                        <div class="reasons-list-wrapper">
+                            <ol class="reasons-list" id="reasons-list-3" start="51">
+                                <!-- Next 25 reasons will be populated by JavaScript -->
+                            </ol>
+                        </div>
+                        
+                        <div class="reasons-list-wrapper">
+                            <ol class="reasons-list" id="reasons-list-4" start="76">
+                                <!-- Last 25 reasons will be populated by JavaScript -->
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/reasons.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

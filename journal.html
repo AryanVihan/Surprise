@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Journal - Vazeeda's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <!-- Turn.js for flipbook effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/turn.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container"></div>
+    
+    <!-- Romantic Navbar -->
+    <nav id="romantic-navbar" class="romantic-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+            <ul class="nav-links">
+                <li><a href="navigation.html" class="nav-link"><i class="fas fa-th-large"></i> Menu</a></li>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#memories" class="nav-link"><i class="fas fa-camera"></i> Memories</a></li>
+                <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                <li><a href="journal.html" class="nav-link active"><i class="fas fa-book"></i> Journal</a></li>
+                <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div id="main-content">
+        <section id="journal" class="section journal-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Love Journal</h2>
+                <div class="section-content">
+                    <div class="journal-intro">
+                        <p>A collection of my thoughts, poems, and letters to you. Flip through the pages to read them all.</p>
+                    </div>
+                    
+                    <div class="journal-container">
+                        <div class="journal-controls">
+                            <button id="prev-page" class="journal-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                            <button id="next-page" class="journal-btn">Next <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div id="flipbook" class="flipbook">
+                            <!-- Cover -->
+                            <div class="hard journal-cover front-cover">
+                                <div class="cover-content">
+                                    <h1>Our Love Journal</h1>
+                                    <div class="cover-heart"><i class="fas fa-heart"></i></div>
+                                    <h2>For Vazeeda</h2>
+                                    <p class="cover-date">May 2025</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Inside Front Cover -->
+                            <div class="hard journal-page inside-cover">
+                                <div class="page-content">
+                                    <h3>This journal belongs to</h3>
+                                    <p class="special-text">Vazeeda</p>
+                                    <p class="quote">"Every love story is beautiful, but ours is my favorite."</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 1 - Diary Entry -->
+                            <div class="journal-page">
+                                <div class="page-content diary-entry">
+                                    <div class="entry-date">January 15, 2025</div>
+                                    <h3>The Day We Met</h3>
+                                    <p>Dear Journal,</p>
+                                    <p>Today I met someone who I think might change my life forever. There was something in her eyes that caught my attention immediately - a spark, a depth that I couldn't look away from.</p>
+                                    <p>We talked for hours, and it felt like minutes. I've never connected with someone so quickly before. Her name is Vazeeda, and I already can't wait to see her again.</p>
+                                    <p>I don't know what will happen, but I have this feeling... this incredible feeling that something special has just begun.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 2 - Poem -->
+                            <div class="journal-page">
+                                <div class="page-content poem">
+                                    <h3>First Thoughts</h3>
+                                    <div class="poem-content">
+                                        <p>A chance encounter,<br>
+                                        A smile that lit the room,<br>
+                                        Eyes that held the universe,<br>
+                                        And stole my breath away.</p>
+                                        
+                                        <p>Words flowed like rivers,<br>
+                                        Between two souls connecting,<br>
+                                        Time stood still that day,<br>
+                                        When you walked into my life.</p>
+                                        
+                                        <p>Your laughter like music,<br>
+                                        Your voice a gentle song,<br>
+                                        I knew in that moment,<br>
+                                        My heart had found its home.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 3 - Diary Entry -->
+                            <div class="journal-page">
+                                <div class="page-content diary-entry">
+                                    <div class="entry-date">February 14, 2025</div>
+                                    <h3>Our First Valentine's Day</h3>
+                                    <p>Dear Journal,</p>
+                                    <p>Today was our first Valentine's Day together, and I wanted everything to be perfect. I spent weeks planning a surprise for Vazeeda.</p>
+                                    <p>The look on her face when she saw the candlelit dinner I had prepared was worth all the effort. We danced in the living room to our favorite songs, and I gave her the necklace I had been saving for this special day.</p>
+                                    <p>But the best moment was when we were just sitting together, talking about our dreams for the future. It's in those quiet moments that I feel most connected to her.</p>
+                                    <p>I'm falling deeper in love with her every day.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 4 - Love Letter -->
+                            <div class="journal-page">
+                                <div class="page-content love-letter">
+                                    <div class="letter-header">
+                                        <div class="letter-date">March 10, 2025</div>
+                                    </div>
+                                    <div class="letter-body">
+                                        <p>My dearest Vazeeda,</p>
+                                        <p>As I write this letter, you're asleep beside me, peaceful and beautiful. I find myself watching you breathe, amazed that someone as wonderful as you has chosen to share your life with me.</p>
+                                        <p>These past months have been the happiest of my life. You've shown me what it means to truly love and be loved in return. Your kindness, your strength, your passion - everything about you captivates me.</p>
+                                        <p>I love the way you scrunch your nose when you laugh. I love how excited you get about the smallest things. I love your compassion for others and your determination to make the world better.</p>
+                                        <p>I promise to cherish every moment we have together, to support your dreams, and to love you more each day than the day before.</p>
+                                        <p class="letter-closing">Forever yours,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 5 - Poem -->
+                            <div class="journal-page">
+                                <div class="page-content poem">
+                                    <h3>Whispers of My Heart</h3>
+                                    <div class="poem-content">
+                                        <p>In the quiet moments,<br>
+                                        When the world is still,<br>
+                                        I listen to my heartbeat,<br>
+                                        And hear it whisper your name.</p>
+                                        
+                                        <p>In the morning light,<br>
+                                        When dawn breaks through,<br>
+                                        I see your smile in the sunshine,<br>
+                                        Brightening my every day.</p>
+                                        
+                                        <p>In the evening shadows,<br>
+                                        When stars begin to shine,<br>
+                                        I feel your love surrounding me,<br>
+                                        A warmth that never fades.</p>
+                                        
+                                        <p>In every breath I take,<br>
+                                        In every dream I dream,<br>
+                                        You are there, my love,<br>
+                                        The center of my universe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 6 - Diary Entry -->
+                            <div class="journal-page">
+                                <div class="page-content diary-entry">
+                                    <div class="entry-date">April 25, 2025</div>
+                                    <h3>The Little Things</h3>
+                                    <p>Dear Journal,</p>
+                                    <p>It's the little things about Vazeeda that make me fall in love with her more each day. The way she always remembers to ask about my day. How she brings me coffee in the morning just the way I like it. The cute text messages she sends when we're apart.</p>
+                                    <p>Today, she surprised me with tickets to see my favorite band. She's been saving for months, even though this kind of music isn't really her thing. That's just who she is - always thinking of others before herself.</p>
+                                    <p>I'm collecting all these small moments in my heart, creating a treasure trove of memories that I'll cherish forever.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 7 - Love Letter -->
+                            <div class="journal-page">
+                                <div class="page-content love-letter">
+                                    <div class="letter-header">
+                                        <div class="letter-date">May 27, 2025</div>
+                                    </div>
+                                    <div class="letter-body">
+                                        <p>My beautiful Vazeeda,</p>
+                                        <p>Happy Birthday, my love! Today we celebrate you - the most amazing person I know. From the moment you entered my life, everything has been brighter, more colorful, more meaningful.</p>
+                                        <p>This past year has been a journey of discovery. I've discovered your favorite songs, the foods that make you smile, the dreams that light up your eyes. I've discovered the sound of your laughter, which has become my favorite melody.</p>
+                                        <p>But most importantly, I've discovered what true love feels like. It feels like coming home. It feels like peace and excitement all at once. It feels like you.</p>
+                                        <p>On your special day, I want you to know that my greatest wish is to make all your wishes come true. Your happiness is my happiness.</p>
+                                        <p>Thank you for being you. Thank you for loving me. Thank you for making every day an adventure.</p>
+                                        <p class="letter-closing">With all my heart,<br>Aryan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Page 8 - Poem -->
+                            <div class="journal-page">
+                                <div class="page-content poem">
+                                    <h3>Birthday Wishes</h3>
+                                    <div class="poem-content">
+                                        <p>Another year around the sun,<br>
+                                        Another year of joy begun,<br>
+                                        Another chance to tell you dear,<br>
+                                        How much I love having you near.</p>
+                                        
+                                        <p>May your day be filled with light,<br>
+                                        May your heart be pure and bright,<br>
+                                        May your dreams all come to pass,<br>
+                                        May our love forever last.</p>
+                                        
+                                        <p>You're a gift to this world, it's true,<br>
+                                        But the greatest gift to me is you,<br>
+                                        So I celebrate with thanks and praise,<br>
+                                        The wonder that is you, today and always.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Inside Back Cover -->
+                            <div class="hard journal-page inside-cover">
+                                <div class="page-content">
+                                    <h3>Our story continues...</h3>
+                                    <p class="quote">"The best is yet to come."</p>
+                                    <div class="small-heart"><i class="fas fa-heart"></i></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Back Cover -->
+                            <div class="hard journal-cover back-cover">
+                                <div class="cover-content">
+                                    <div class="cover-heart"><i class="fas fa-heart"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+    <script src="js/journal.js"></script>
+    
+    <script>
+        // Show main content immediately since this is a separate page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

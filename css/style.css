@@ -1,0 +1,341 @@
+/* Base Styles */
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Fullscreen Section */
+.fullscreen-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Videos */
+.welcome-video-container {
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.welcome-video-container.left {
+    left: 5%;
+}
+
+.welcome-video-container.right {
+    right: 5%;
+}
+
+.welcome-video {
+    width: 80%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.welcome-video:hover video {
+    transform: scale(1.05);
+}
+
+/* Welcome Content */
+.welcome-content {
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    z-index: 2;
+}
+
+.welcome-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #ff3366;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.welcome-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #9933ff;
+}
+
+.welcome-message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.heart-button {
+    background: linear-gradient(45deg, #ff3366, #9933ff);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-button span {
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.heart-button .heart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.heart-button .heart-icon i {
+    color: white;
+    font-size: 1.2rem;
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Floating Hearts */
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    color: #ff3366;
+    font-size: 20px;
+    pointer-events: none;
+    animation: float 15s linear infinite;
+    z-index: 1;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+}
+
+/* Audio Controls */
+.audio-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-controls button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.audio-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.audio-message {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    max-width: 150px;
+    animation: pulse 2s infinite;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Main Content Placeholder */
+.placeholder-message {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.placeholder-message h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff3366;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .welcome-video-container {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .welcome-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .welcome-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fullscreen-section {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+    
+    .welcome-video-container {
+        position: relative;
+        width: 90%;
+        height: 30vh;
+        left: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-video-container.left,
+    .welcome-video-container.right {
+        left: 0;
+        right: 0;
+    }
+    
+    .welcome-video {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .welcome-content {
+        padding: 25px;
+    }
+    
+    .welcome-content h1 {
+        font-size: 3rem;
+    }
+    
+    .welcome-content h2 {
+        font-size: 1.3rem;
+    }
+}

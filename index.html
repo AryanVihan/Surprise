@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vazeeda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/cursor-effects.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <!-- Howler.js for audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="fullscreen-section">
+        <!-- Floating Hearts Container -->
+        <div class="hearts-container"></div>
+        
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+            <button id="music-toggle" aria-label="Toggle Music">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="audio-message">Click to play background music</div>
+        </div>
+        <!-- Left Video Container -->
+        <div class="welcome-video-container left">
+            <div class="welcome-video glass-card">
+                <video autoplay muted loop playsinline preload="metadata" id="left-video">
+                    <source src="videos/welcome vid1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        
+        <!-- Welcome Content -->
+        <div class="welcome-content glass-card">
+            <h1>To Vazeeda</h1>
+            <h2>The love of my life, on your special day...</h2>
+            <p class="welcome-message">A journey through our memories and love</p>
+            <button id="enter-button" class="heart-button pulse-animation">
+                <span>Enter</span>
+                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+            </button>
+        </div>
+        
+        <!-- Right Video Container -->
+        <div class="welcome-video-container right">
+            <div class="welcome-video glass-card">
+                <video autoplay muted loop playsinline preload="metadata" id="right-video">
+                    <source src="videos/welcome vid2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="main-content" class="hidden">
+        <!-- Romantic Navbar -->
+        <nav id="romantic-navbar" class="romantic-navbar">
+            <div class="nav-container">
+                <div class="nav-logo">V<i class="fas fa-heart"></i>A</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="reasons.html" class="nav-link"><i class="fas fa-heart"></i> Reasons</a></li>
+                    <li><a href="letters.html" class="nav-link"><i class="fas fa-envelope"></i> Letters</a></li>
+                    <li><a href="quiz.html" class="nav-link"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="wishes.html" class="nav-link"><i class="fas fa-birthday-cake"></i> Wishes</a></li>
+                    <li><a href="bottle.html" class="nav-link"><i class="fas fa-glass-whiskey"></i> Bottle</a></li>
+                    <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                </ul>
+                <button id="nav-toggle" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Welcome Message -->
+        <section id="welcome" class="section welcome-section">
+            <div class="section-container">
+                <h2 class="section-title">Happy Birthday, Vazeeda!</h2>
+                <div class="section-content">
+                    <div class="welcome-message">
+                        <p>Welcome to your special birthday celebration website! I've created this with all my love to celebrate you and everything you mean to me.</p>
+                        <p>Explore the different sections to discover all the surprises I've prepared just for you.</p>
+                    </div>
+                    
+                    <div class="section-cards">
+                        <a href="#memories" class="section-card">
+                            <i class="fas fa-camera"></i>
+                            <h3>Our Journey</h3>
+                            <p>A beautiful timeline of our most precious moments together.</p>
+                        </a>
+                        
+                        <a href="reasons.html" class="section-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>100 Reasons</h3>
+                            <p>100 reasons why I love you, each one straight from my heart.</p>
+                        </a>
+                        
+                        <a href="letters.html" class="section-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Open When Letters</h3>
+                            <p>Special messages for different moments when you need them most.</p>
+                        </a>
+                        
+                        <a href="quiz.html" class="section-card">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Relationship Quiz</h3>
+                            <p>How well do you know us? Test your knowledge about our relationship.</p>
+                        </a>
+                        
+                        <a href="wishes.html" class="section-card">
+                            <i class="fas fa-star"></i>
+                            <h3>Birthday Wishes</h3>
+                            <p>My heartfelt wishes for your special day and for every day after.</p>
+                        </a>
+                        
+
+                        <a href="bottle.html" class="section-card">
+                            <i class="fas fa-glass-whiskey"></i>
+                            <h3>Message in a Bottle</h3>
+                            <p>A special message sent across the ocean of my heart, just for you.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="memories" class="section memories-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Journey Together</h2>
+                <div class="section-content">
+                    <p class="timeline-intro">Every moment with you has been a beautiful part of our story. Here's a glimpse of our journey together...</p>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-track" id="timeline-track">
+                            <!-- Timeline items -->
+                            <div class="timeline-item" data-year="2020" data-month="January">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together1.png" alt="Our journey - First meeting" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2020" data-month="May">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together2.png" alt="Our journey - First date" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2020" data-month="September">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together3.png" alt="Our journey - Beach trip" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2021" data-month="February">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together4.png" alt="Our journey - Valentine's Day" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2021" data-month="July">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together5.png" alt="Our journey - Moving in" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2022" data-month="April">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together6.jpg" alt="Our journey - Anniversary trip" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2023" data-month="October">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together7.jpg" alt="Our journey - Family gathering" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-year="2024" data-month="March">
+                                <div class="timeline-image-container">
+                                    <img src="images/journey together8.jpg" alt="Our journey - Special moment" class="timeline-image">
+                                    <div class="timeline-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-controls">
+                            <button class="timeline-button prev-button"><i class="fas fa-chevron-left"></i></button>
+                            <button class="timeline-button next-button"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="future" class="section future-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Future Together</h2>
+                <div class="section-content">
+                    <div class="future-message">
+                        <p>As we celebrate your birthday, I can't help but dream about all the beautiful moments that await us.</p>
+                        <p>Every day with you is a gift, and I promise to cherish each one as we build our future together.</p>
+                        <p>Happy birthday, my love. Here's to countless more celebrations, adventures, and memories we've yet to create.</p>
+                    </div>
+                    <div class="future-video-container">
+                        <div class="future-video">
+                            <video autoplay muted loop playsinline preload="metadata" id="future-video">
+                                <source src="videos/future video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- New audio controller that fixes all audio issues -->
+    <script src="js/audio-controller.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/confetti-triggers.js"></script>
+</body>
+</html>

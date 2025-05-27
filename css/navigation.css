@@ -1,0 +1,226 @@
+/* Navigation Styles */
+
+/* Romantic Navbar */
+.romantic-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(255, 51, 102, 0.9), rgba(153, 51, 255, 0.9));
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo i {
+    font-size: 1.2rem;
+    margin: 0 5px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.active-link {
+    transform: translateY(-2px);
+}
+
+.active-link::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Sticky Navbar Effect */
+.navbar-sticky {
+    padding: 10px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background: linear-gradient(to bottom, rgba(255, 51, 102, 0.95), rgba(153, 51, 255, 0.95));
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: left 0.3s ease;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 20px 0;
+    }
+    
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Sections Styling */
+.section {
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 70px; /* For smooth scrolling with sticky header */
+}
+
+.section-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #ff3366;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: white;
+}
+
+/* Themed Section Colors */
+.memories-section {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+}
+
+.reasons-section {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(26, 26, 46, 0.8));
+}
+
+.wishes-section {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+}
+
+.future-section {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(26, 26, 46, 0.8));
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff3366, #9933ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

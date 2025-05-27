@@ -1,0 +1,160 @@
+/* Optimized Visual Effects and Contrasting Colors */
+
+/* Reduce will-change usage to improve performance */
+* {
+    will-change: auto !important;
+}
+
+/* Glass Morphism Cards - optimized */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Neon Glow Effects */
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 5px #ff3366, 0 0 10px #ff3366, 0 0 20px #ff3366, 0 0 40px #ff3366;
+    transition: all 0.3s ease;
+}
+
+.neon-text:hover {
+    text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 40px #00c6ff;
+}
+
+.neon-border {
+    border: 2px solid #ff3366;
+    box-shadow: 0 0 5px #ff3366, 0 0 10px #ff3366, inset 0 0 5px #ff3366;
+    transition: all 0.3s ease;
+}
+
+.neon-border:hover {
+    border-color: #00c6ff;
+    box-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, inset 0 0 5px #00c6ff;
+}
+
+/* Rainbow Borders */
+.rainbow-border {
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.rainbow-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(45deg, 
+        #ff3366, #8e2de2, #0072ff, #00c6ff, 
+        #ff9966, #ffcc33, #ff3366);
+    background-size: 400% 400%;
+    animation: gradient-shift 10s linear infinite;
+    border-radius: 12px;
+}
+
+.rainbow-border::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    z-index: -1;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Vibrant Section Backgrounds */
+.section:nth-child(odd) {
+    background: linear-gradient(135deg, rgba(142, 45, 226, 0.05), rgba(0, 114, 255, 0.05));
+}
+
+.section:nth-child(even) {
+    background: linear-gradient(135deg, rgba(255, 51, 102, 0.05), rgba(255, 153, 102, 0.05));
+}
+
+/* Gradient Buttons */
+.gradient-button {
+    background: linear-gradient(45deg, #ff3366, #ff9966);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #8e2de2, #0072ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(142, 45, 226, 0.4);
+}
+
+/* Floating Elements */
+.float-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Pulsing Elements */
+.pulse-element {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Rotating Elements */
+.rotate-element {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hover Zoom Effect */
+.zoom-on-hover {
+    transition: transform 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+/* Typing Cursor */
+.typing-cursor {
+    display: inline-block;
+    color: #ff3366;
+    font-size: 1.2em;
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
